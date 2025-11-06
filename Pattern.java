@@ -25,13 +25,26 @@ public class Pattern{
         System.out.println();
         i++;
     }
-
+   }
+    public static void odds(int start){
+        int n = 1;
+        while(start >= 1){
+            int j = 0;
+            while (j < start){
+                System.out.print(start);
+                    j++;
+            }
+        
+        start -= 2;
+        System.out.println("");
+    }
    }
    
 
     
     public static void main (String [] args){
-    stars(7);
-    triangle(9);
+   // stars(7);
+   // triangle(9);
+    //odds(9);
     }
 }    
