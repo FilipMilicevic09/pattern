@@ -32,8 +32,8 @@ public class Pattern{
    //Postcondition: Prints a pattern of odd numbers in decreasing order, each row contianing the num repeted that many times.
     public static void odds(int start){
         while(start >= 1){
-            int j = 0;
-            while (j < start){
+            int j = 1;
+            while (j <= start){
                 System.out.print(start);
                     j++;
             }
@@ -45,34 +45,34 @@ public class Pattern{
    //precondition: maxE >= 1
    //postcondition: prints a pattern of alternation E and O characters in a  sideways pyramid shape increasing to the maxE and going back down to 1
    public static void eo (int maxE) {
-    boolean ifE;
+    boolean isOdd;
     if (maxE % 2 == 0) {
-        ifE = false;
+        isOdd = false;
     } else {
-        ifE = true;
+        isOdd = true;
     }
 
     for (int i = 1; i <= maxE; i++) {
         for (int j = 0; j < i; j++ ){
-            if (ifE) {
+            if (isOdd) {
                 System.out.print("E");
             } else{
-                System.out.print("o");
+                System.out.print("O");
             }
         }
         System.out.println();
-        ifE = !ifE;
+        isOdd = !isOdd;
     }
     for (int i = maxE - 1; i >= 1; i--){
         for (int j = 0; j < i; j++){
-            if (ifE){
+            if (isOdd){
             System.out.print("E");
             } else {
                 System.out.print("O");
             }
         }
         System.out.println();
-        ifE = ! ifE;
+        isOdd = !isOdd;
     }
 
    }
@@ -87,8 +87,8 @@ public class Pattern{
             s++;
         }
         int numCount = 2 * (rows - i) + 1;
-        int j = 0; 
-        while (j < numCount) {
+        int j = 1; 
+        while (j <=numCount) {
             System.out.print(i);
             j++;
         }
@@ -98,13 +98,15 @@ public class Pattern{
    }
 
     
-    public static void main (String [] args){
+public static void main (String [] args){
    stars(7);
    System.out.println();
   triangle(9);
    System.out.println();
     odds(9);
      System.out.println();
+    eo(5);
+    System.out.println();
     eo(6);
     System.out.println();
     pyramid(5);
