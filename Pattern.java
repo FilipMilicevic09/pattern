@@ -31,16 +31,14 @@ public class Pattern{
    //Precondition: start >= 1 and start as odd int
    //Postcondition: Prints a pattern of odd numbers in decreasing order, each row contianing the num repeted that many times.
     public static void odds(int start){
-        while(start >= 1){
-            int j = 1;
-            while (j <= start){
-                System.out.print(start);
-                    j++;
-            }
+        for(;start >= 1; start -= 2){
         
-        start -= 2;
-        System.out.println("");
-    }
+            for (int j = 1; j <= start; j++){
+        
+        System.out.print(start);
+         }
+         System.out.println();
+            }
    }
    //precondition: maxE >= 1
    //postcondition: prints a pattern of alternation E and O characters in a  sideways pyramid shape increasing to the maxE and going back down to 1
